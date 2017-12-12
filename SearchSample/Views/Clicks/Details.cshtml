@@ -1,0 +1,95 @@
+﻿@model SearchSample.Models.ClickSummary
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Click</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TrackId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrackId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrackName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrackName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrackViewUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrackViewUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WrapperType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WrapperType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kind)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kind)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryGenreName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryGenreName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Currency)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Currency)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CollectionId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CollectionId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CollectionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => Model.Clicks)
+        </dd>
+
+    </dl>
+</div>

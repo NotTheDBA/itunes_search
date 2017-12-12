@@ -1,0 +1,104 @@
+﻿@model SearchSample.Models.SearchResults 
+
+@{
+    ViewBag.Title = "Results";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Results</h2>
+
+<p>
+    @Html.ActionLink("Search", "Search")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(modelItem => Model.Results.FirstOrDefault().TrackName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(modelItem => Model.Results.FirstOrDefault().CollectionName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(modelItem => Model.Results.FirstOrDefault().ArtistName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(modelItem => Model.Results.FirstOrDefault().PrimaryGenreName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(modelItem => Model.Results.FirstOrDefault().Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(modelItem => Model.Results.FirstOrDefault().Currency)
+        </th>
+        <th>
+            @Html.DisplayNameFor(modelItem => Model.Results.FirstOrDefault().Kind) /
+            @Html.DisplayNameFor(modelItem => Model.Results.FirstOrDefault().WrapperType)
+        </th>
+    </tr>
+
+    @foreach (var result in Model.Results)
+    {
+        using (Html.BeginForm("Jump", "Searches", FormMethod.Post, new { target = "_blank" }))
+        {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => result.TrackName)
+            @Html.HiddenFor(modelItem => result.TrackName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => result.CollectionName)
+            @Html.HiddenFor(modelItem => result.CollectionName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => result.ArtistName)
+            @Html.HiddenFor(modelItem => result.ArtistName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => result.PrimaryGenreName)
+            @Html.HiddenFor(modelItem => result.PrimaryGenreName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => result.Country)
+            @Html.HiddenFor(modelItem => result.Country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => result.Currency)
+            @Html.HiddenFor(modelItem => result.Currency)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => result.Kind)
+            @Html.DisplayFor(modelItem => result.WrapperType)
+
+            @Html.HiddenFor(modelItem => result.WrapperType)
+            @Html.HiddenFor(modelItem => result.Kind)
+        </td>
+        <td>
+            @Html.HiddenFor(modelItem => result.TrackId)
+            @Html.HiddenFor(modelItem => result.CollectionId)
+            @Html.HiddenFor(modelItem => result.CollectionCensoredName)
+            @Html.HiddenFor(modelItem => result.TrackCensoredName)
+            @Html.HiddenFor(modelItem => result.TrackViewUrl)
+            @Html.HiddenFor(modelItem => result.ArtistViewUrl)
+            @Html.HiddenFor(modelItem => result.CollectionViewUrl)
+            @Html.HiddenFor(modelItem => result.PreviewUrl)
+            @Html.HiddenFor(modelItem => result.ArtworkUrl60)
+            @Html.HiddenFor(modelItem => result.ArtworkUrl100)
+            @Html.HiddenFor(modelItem => result.CollectionViewUrl)
+            @Html.HiddenFor(modelItem => result.CollectionPrice)
+            @Html.HiddenFor(modelItem => result.TrackPrice)
+            @Html.HiddenFor(modelItem => result.CollectionExplicitness)
+            @Html.HiddenFor(modelItem => result.TrackExplicitness)
+            @Html.HiddenFor(modelItem => result.DiscCount)
+            @Html.HiddenFor(modelItem => result.DiscNumber)
+            @Html.HiddenFor(modelItem => result.TrackCount)
+            @Html.HiddenFor(modelItem => result.TrackNumber)
+            @Html.HiddenFor(modelItem => result.TrackTimeMillis)
+
+            @Html.AntiForgeryToken()
+            <button id="@result.TrackId" type="submit" class="btn btn-primary">Get</button>
+        </td>
+    </tr>
+        }
+    }
+
+</table>

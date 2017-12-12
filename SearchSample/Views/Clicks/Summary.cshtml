@@ -1,0 +1,94 @@
+﻿@model IEnumerable<SearchSample.Models.ClickSummary>
+
+@{
+    ViewBag.Title = "Summary";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Click Summary</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Clicks)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrackId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrackName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrackViewUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CollectionViewUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WrapperType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kind)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrimaryGenreName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Currency)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CollectionId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CollectionName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Clicks)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TrackId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TrackName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TrackViewUrl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CollectionViewUrl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WrapperType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kind)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrimaryGenreName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Currency)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CollectionId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CollectionName)
+        </td>
+
+    </tr>
+    }
+
+</table>
