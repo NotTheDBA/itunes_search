@@ -12,6 +12,7 @@
 </p>
 <table class="table">
     <tr>
+        <th></th>
         <th>
             @Html.DisplayNameFor(modelItem => Model.Results.FirstOrDefault().TrackName)
         </th>
@@ -41,6 +42,9 @@
         using (Html.BeginForm("Jump", "Searches", FormMethod.Post, new { target = "_blank" }))
         {
     <tr>
+        <td>
+            <img src="@Url.Content(result.ArtworkUrl60)" alt="@result.TrackName" />
+        </td>
         <td>
             @Html.DisplayFor(modelItem => result.TrackName)
             @Html.HiddenFor(modelItem => result.TrackName)
