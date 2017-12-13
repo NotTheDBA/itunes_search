@@ -43,6 +43,31 @@
         {
     <tr>
         <td>
+            @Html.HiddenFor(modelItem => result.TrackId)
+            @Html.HiddenFor(modelItem => result.CollectionId)
+            @Html.HiddenFor(modelItem => result.CollectionCensoredName)
+            @Html.HiddenFor(modelItem => result.TrackCensoredName)
+            @Html.HiddenFor(modelItem => result.TrackViewUrl)
+            @Html.HiddenFor(modelItem => result.ArtistViewUrl)
+            @Html.HiddenFor(modelItem => result.CollectionViewUrl)
+            @Html.HiddenFor(modelItem => result.PreviewUrl)
+            @Html.HiddenFor(modelItem => result.ArtworkUrl60)
+            @Html.HiddenFor(modelItem => result.ArtworkUrl100)
+            @Html.HiddenFor(modelItem => result.CollectionViewUrl)
+            @Html.HiddenFor(modelItem => result.CollectionPrice)
+            @Html.HiddenFor(modelItem => result.TrackPrice)
+            @Html.HiddenFor(modelItem => result.CollectionExplicitness)
+            @Html.HiddenFor(modelItem => result.TrackExplicitness)
+            @Html.HiddenFor(modelItem => result.DiscCount)
+            @Html.HiddenFor(modelItem => result.DiscNumber)
+            @Html.HiddenFor(modelItem => result.TrackCount)
+            @Html.HiddenFor(modelItem => result.TrackNumber)
+            @Html.HiddenFor(modelItem => result.TrackTimeMillis)
+
+            @Html.AntiForgeryToken()
+            <button id="@result.TrackId" type="submit" class="btn btn-primary">Get</button>
+        </td>
+        <td>
             <img src="@Url.Content(result.ArtworkUrl60)" alt="@result.TrackName" />
         </td>
         <td>
@@ -70,36 +95,11 @@
             @Html.HiddenFor(modelItem => result.Currency)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => result.Kind) <br/>
+            @Html.DisplayFor(modelItem => result.Kind) <br />
             @Html.DisplayFor(modelItem => result.WrapperType)
 
             @Html.HiddenFor(modelItem => result.WrapperType)
             @Html.HiddenFor(modelItem => result.Kind)
-        </td>
-        <td>
-            @Html.HiddenFor(modelItem => result.TrackId)
-            @Html.HiddenFor(modelItem => result.CollectionId)
-            @Html.HiddenFor(modelItem => result.CollectionCensoredName)
-            @Html.HiddenFor(modelItem => result.TrackCensoredName)
-            @Html.HiddenFor(modelItem => result.TrackViewUrl)
-            @Html.HiddenFor(modelItem => result.ArtistViewUrl)
-            @Html.HiddenFor(modelItem => result.CollectionViewUrl)
-            @Html.HiddenFor(modelItem => result.PreviewUrl)
-            @Html.HiddenFor(modelItem => result.ArtworkUrl60)
-            @Html.HiddenFor(modelItem => result.ArtworkUrl100)
-            @Html.HiddenFor(modelItem => result.CollectionViewUrl)
-            @Html.HiddenFor(modelItem => result.CollectionPrice)
-            @Html.HiddenFor(modelItem => result.TrackPrice)
-            @Html.HiddenFor(modelItem => result.CollectionExplicitness)
-            @Html.HiddenFor(modelItem => result.TrackExplicitness)
-            @Html.HiddenFor(modelItem => result.DiscCount)
-            @Html.HiddenFor(modelItem => result.DiscNumber)
-            @Html.HiddenFor(modelItem => result.TrackCount)
-            @Html.HiddenFor(modelItem => result.TrackNumber)
-            @Html.HiddenFor(modelItem => result.TrackTimeMillis)
-
-            @Html.AntiForgeryToken()
-            <button id="@result.TrackId" type="submit" class="btn btn-primary">Get</button>
         </td>
     </tr>
         }
