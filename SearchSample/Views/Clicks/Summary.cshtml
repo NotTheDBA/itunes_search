@@ -13,22 +13,14 @@
             @Html.DisplayNameFor(model => model.Clicks)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TrackId)
+            @Html.DisplayNameFor(model => model.CollectionName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.TrackName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TrackViewUrl)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CollectionViewUrl)
-        </th>
-        <th>
+            @Html.DisplayNameFor(model => model.Kind) /
             @Html.DisplayNameFor(model => model.WrapperType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Kind)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.PrimaryGenreName)
@@ -43,8 +35,14 @@
             @Html.DisplayNameFor(model => model.CollectionId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CollectionName)
+            @Html.DisplayNameFor(model => model.TrackId)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CollectionViewUrl)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.TrackViewUrl)
+        </th>*@
         <th></th>
     </tr>
 
@@ -55,22 +53,14 @@
             @Html.DisplayFor(modelItem => item.Clicks)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.TrackId)
+            @Html.DisplayFor(modelItem => item.CollectionName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.TrackName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.TrackViewUrl)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CollectionViewUrl)
-        </td>
-        <td>
+            @Html.DisplayFor(modelItem => item.Kind) <br/> 
             @Html.DisplayFor(modelItem => item.WrapperType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Kind)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.PrimaryGenreName)
@@ -85,8 +75,14 @@
             @Html.DisplayFor(modelItem => item.CollectionId)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.CollectionName)
+            @Html.DisplayFor(modelItem => item.TrackId)
         </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CollectionViewUrl)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.TrackViewUrl)
+        </td>*@
 
     </tr>
     }
