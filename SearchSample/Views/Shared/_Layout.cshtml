@@ -6,11 +6,15 @@
     <title>@ViewBag.Title - Search Case Study</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <style>
-        body {
-            padding-top: 60px;
-        }
-    </style>
+    <script>
+        $(window).resize(function () {
+            $('body').css('padding-top', parseInt($('#main-navbar').css("height")) + 10);
+        });
+
+        $(window).load(function () {
+            $('body').css('padding-top', parseInt($('#main-navbar').css("height")) + 10);
+        });
+    </script>
 </head>
 <body>
     @Html.Partial("_NavBar")
